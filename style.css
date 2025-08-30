@@ -1,0 +1,12 @@
+body {
+    height: 100vh;
+    display: flex;
+    overflow-y: hidden;
+    font-family: "Comic Sans MS";
+    background-color: #383838;
+    color: white
+}
+
+h4 {
+    margin: 0;
+}
