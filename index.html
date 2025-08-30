@@ -6,27 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+
     <title>Snake</title>
+    <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;   /* prevent page scroll */
+      touch-action: none; /* disable browser gestures */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #111;
+      color: white;
+      font-family: sans-serif;
+    }
+    canvas {
+      display: block;
+    }
+    #hud {
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
+      font-size: 18px;
+    }
+  </style>
 </head>
 
 <body>
-    <canvas id="game__grid" height="800" width="800"></canvas>
-    <div>
-        <h1>Il serpente di gangale</h1>
-        <br>
-        <div style="display: inline-flex;">
-            <h4>Best score:</h4>
-            <h4>&nbsp;</h4>
-            <h4 id="best_score">0</h4>
-        </div>
-        <br>
-        <div style="display: inline-flex;">
-            <h2>Punteggio: </h2>
-            <h2>&nbsp;</h2>
-            <h2 id="score">0</h2>
-
-        </div>
-    </div>
+  <div id="hud">
+    <div>Score: <span id="score">0</span></div>
+    <div>Best: <span id="best_score">0</span></div>
+  </div>
+  <canvas id="game__grid"></canvas>
+  <script src="script.js"></script>    
 </body>
 
 </html>
